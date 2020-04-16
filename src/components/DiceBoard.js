@@ -9,6 +9,9 @@ class DiceBoard extends React.Component{
             diceBag: [],
             newDi: 0
         }
+        this.handleNewDi = this.handleNewDi.bind(this);
+        this.handleAddDi = this.handleAddDi.bind(this);
+        this.handleReset = this.handleReset.bind(this);
     }
 
     handleNewDi = (e) => {
@@ -20,7 +23,9 @@ class DiceBoard extends React.Component{
     };
     handleReset = (e) => {
         this.setState({diceBag: []})
-    }
+    };
+        
+ 
 
     render(){
         const di = this.state.diceBag.map(di => 
@@ -29,6 +34,7 @@ class DiceBoard extends React.Component{
             // this is passed up through the constructor props which the Di component can now access
             <Di numSides={di}/>
         );
+
 
         return(
             <>

@@ -24,10 +24,15 @@ code {
   font-size: 15px;
 }
 
+.sidesNum {
+  font-size: 12px;
+}
+
 #sides_input {
   width: 40px;
   height: 30;
   font-size: 20px;
+  margin: 5px;
 }
 
 #add_di_btn {

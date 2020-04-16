@@ -11,6 +11,7 @@ class Di extends React.Component{
         }
 
         this.handleNumSides = this.handleNumSides.bind(this);
+        this.handleRoll = this.handleRoll.bind(this);
     }
 
     handleNumSides = (e) => {
@@ -20,7 +21,16 @@ class Di extends React.Component{
     handleRoll = (e) => {
         e.preventDefault();
         this.setState({result:  Math.floor(Math.random() * this.state.numSides + 1)})
-    }
+    };
+
+    // function spin(){
+    //     const testDi = document.getElementById('testDi');
+    //     testDi.classList.add("spinning")
+    
+    //     setTimeout(function(){ 
+    //     testDi.classList.remove("spinning")}, 1000);
+    //     };
+    // }
 
     render(){
 
@@ -28,6 +38,7 @@ class Di extends React.Component{
         return(
             <>
                 <div className="di-container">
+                    <div className="sidesNum">{this.state.numSides} sides</div>
                     <div className="di">{this.state.result}</div>
 
                     {/* <input type="number" min="1" max="20" onChange={this.handleNumSides} /> */}
