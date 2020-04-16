@@ -6,8 +6,20 @@ class DiceBoard extends React.Component{
         super(props);
 
         this.state = {
-            diceBag: [2,3,4,5,6]
+            diceBag: [],
+            newDi: 0
         }
+    }
+
+    handleNewDi = (e) => {
+        this.setState({newDi: e.target.value})
+    };
+    handleAddDi = (e) => {
+        e.preventDefault();
+        this.setState({ diceBag: [...this.state.diceBag, this.state.newDi] }); 
+    };
+    handleReset = (e) => {
+        this.setState({diceBag: []})
     }
 
     render(){
@@ -20,8 +32,9 @@ class DiceBoard extends React.Component{
 
         return(
             <>
-                <input type="number" />
-                <button type="button" onClick={this.handleNewDi}>Create Di</button>
+                <input id="sides_input" type="number" onChange={this.handleNewDi}/>
+                <button id="add_di_btn" className="btn" type="button" onClick={this.handleAddDi}>Create Di</button>
+                <button id="reset_btn" className="btn" type="button" onClick={this.handleReset}>Reset Dice</button>
                 <div id="dice_board">
                     {di}
                 </div>

@@ -17,6 +17,27 @@ code {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.btn {
+  border-radius: 10px;
+  margin: 5px;
+  padding: 3px;
+  font-size: 15px;
+}
+
+#sides_input {
+  width: 40px;
+  height: 30;
+  font-size: 20px;
+}
+
+#add_di_btn {
+  background-color: rgb(81, 247, 81);
+}
+
+#reset_btn {
+  background-color: rgb(250, 81, 81);
+}
+
 .di-container {
   margin: 20px;
 }
