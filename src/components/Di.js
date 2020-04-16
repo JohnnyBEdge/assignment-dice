@@ -5,9 +5,9 @@ class Di extends React.Component{
         super(props);
 
         this.state = {
-            numSides: 1,
+            //numsides pulls the variable numSides out of props and assigns itself the value
+            numSides: this.props.numSides,
             result: 0,
-            diceBag:[2, 4, 5, 6, 7]
         }
 
         this.handleNumSides = this.handleNumSides.bind(this);
@@ -30,7 +30,7 @@ class Di extends React.Component{
                 <div className="di-container">
                     <div className="di">{this.state.result}</div>
 
-                    <input type="number" min="1" max="20" onChange={this.handleNumSides} />
+                    {/* <input type="number" min="1" max="20" onChange={this.handleNumSides} /> */}
 
                     <button id="roll_btn" onClick={this.handleRoll}>Roll</button>
                 </div>

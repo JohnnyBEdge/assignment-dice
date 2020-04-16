@@ -2,14 +2,15 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.dice-logo {
+  height: 10vmin;
   pointer-events: none;
+  margin-bottom: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .dice-logo {
+    animation: App-logo-spin infinite 1s linear;
   }
 }
 
@@ -24,9 +25,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {

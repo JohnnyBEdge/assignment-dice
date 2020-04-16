@@ -12,6 +12,15 @@ code {
     monospace;
 }
 
+#dice_board{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.di-container {
+  margin: 20px;
+}
+
 .di {
   display: flex;
   justify-content: center;
